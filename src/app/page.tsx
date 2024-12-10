@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -65,7 +66,7 @@ export default function Home() {
 						>
 							<div className="absolute inset-0 bg-gradient-to-br from-blue-200/10 to-grey-200/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 							<div className="relative z-10">
-								<div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+								<div className="w-12 h-12 bg-white dark:bg-blue-900/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
 									<service.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
 								</div>
 								<h3 className="text-xl font-semibold mb-2 text-grey-800 dark:text-grey-200">

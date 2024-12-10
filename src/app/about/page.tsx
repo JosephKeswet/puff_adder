@@ -68,7 +68,7 @@ export default function About() {
 	return (
 		<div className="container mx-auto px-4 py-12">
 			<ScrollAnimation variants={pageLoadVariants}>
-				<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-grey-700 dark:from-blue-400 dark:to-grey-300 animate-gradient text-glow">
+				<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-grey-700 dark:from-blue-400 dark:to-grey-300 animate-gradient ">
 					About Puff-Adder Limited
 				</h1>
 			</ScrollAnimation>

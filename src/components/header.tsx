@@ -1,15 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [darkMode, setDarkMode] = useState(false);
 	const pathname = usePathname();
+
+	useEffect(() => {
+		const isDarkMode = document.documentElement.classList.contains("dark");
+		setDarkMode(isDarkMode);
+	}, []);
 
 	const toggleDarkMode = () => {
 		setDarkMode(!darkMode);
@@ -24,15 +30,20 @@ export default function Header() {
 	];
 
 	return (
-		<header className="bg-white dark:bg-gray-900 sticky top-0 z-50 shadow-sm">
+		<header className="bg-white/80 dark:bg-black/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
 					<div className="flex justify-start lg:w-0 lg:flex-1">
 						<Link
 							href="/"
-							className="text-2xl font-bold text-primary"
+							className="text-2xl font-bold text-blue-600 dark:text-white"
 						>
-							Puff-Adder
+							<Image
+								src="/assets/Logo.png"
+								width={60}
+								height={60}
+								alt="Logo"
+							/>
 						</Link>
 					</div>
 					<div className="-mr-2 -my-2 md:hidden">
@@ -61,7 +72,7 @@ export default function Header() {
 								href={item.href}
 								className={`text-base font-medium ${
 									pathname === item.href
-										? "text-primary"
+										? "text-blue-600 dark:text-white"
 										: "text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
 								}`}
 							>
@@ -77,12 +88,15 @@ export default function Header() {
 							className="mr-4"
 						>
 							{darkMode ? (
-								<Sun className="h-5 w-5" />
+								<Sun className="h-5 w-5 text-gray-400" />
 							) : (
 								<Moon className="h-5 w-5" />
 							)}
 						</Button>
-						<Button asChild>
+						<Button
+							asChild
+							className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+						>
 							<Link href="/contact">Get Started</Link>
 						</Button>
 					</div>
@@ -91,13 +105,13 @@ export default function Header() {
 
 			{mobileMenuOpen && (
 				<div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-					<div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-800 divide-y-2 divide-gray-50">
+					<div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-900 divide-y-2 divide-gray-50 dark:divide-gray-800">
 						<div className="pt-5 pb-6 px-5">
 							<div className="flex items-center justify-between">
 								<div>
 									<Link
 										href="/"
-										className="text-2xl font-bold text-primary"
+										className="text-2xl font-bold text-blue-600 dark:text-white"
 									>
 										Puff-Adder
 									</Link>
@@ -121,7 +135,7 @@ export default function Header() {
 										<Link
 											key={item.name}
 											href={item.href}
-											className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
+											className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800"
 										>
 											<span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">
 												{item.name}
@@ -139,14 +153,14 @@ export default function Header() {
 								className="mr-4"
 							>
 								{darkMode ? (
-									<Sun className="h-5 w-5" />
+									<Sun className="h-5 w-5 text-gray-400" />
 								) : (
 									<Moon className="h-5 w-5" />
 								)}
 							</Button>
 							<Button
 								asChild
-								className="w-full"
+								className="w-full bg-blue-600 text-white hover:bg-blue-700 dark:bg-white dark:text-black dark:hover:bg-gray-200"
 							>
 								<Link href="/contact">Get Started</Link>
 							</Button>

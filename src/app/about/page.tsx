@@ -68,7 +68,7 @@ export default function About() {
 	return (
 		<div className="container mx-auto px-4 py-12">
 			<ScrollAnimation variants={pageLoadVariants}>
-				<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-slate-700 dark:from-purple-400 dark:to-slate-300 animate-gradient text-glow">
+				<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-grey-700 dark:from-blue-400 dark:to-grey-300 animate-gradient text-glow">
 					About Puff-Adder Limited
 				</h1>
 			</ScrollAnimation>
@@ -105,13 +105,14 @@ export default function About() {
 						key={reason.title}
 						variants={cardVariants}
 					>
-						<MotionCard className="overflow-hidden group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm card-hover-effect glassmorphism">
+						<MotionCard className="overflow-hidden group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-grey-200 dark:border-grey-700 bg-white/80 dark:bg-grey-800/80 backdrop-blur-sm card-hover-effect glassmorphism">
+							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-grey-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 							<CardContent className="flex flex-col items-center p-6 relative z-10">
-								<reason.icon className="h-12 w-12 text-purple-500 dark:text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
-								<h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">
+								<reason.icon className="h-12 w-12 text-blue-500 dark:text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
+								<h3 className="text-xl font-semibold mb-2 text-grey-800 dark:text-grey-200">
 									{reason.title}
 								</h3>
-								<p className="text-center text-slate-600 dark:text-slate-300">
+								<p className="text-center text-grey-600 dark:text-grey-300">
 									{reason.description}
 								</p>
 							</CardContent>
@@ -177,7 +178,7 @@ export default function About() {
 			</div>
 
 			<ScrollAnimation variants={pageLoadVariants}>
-				<div className="bg-gradient-to-r from-purple-600 to-slate-700 text-white rounded-lg p-8 text-center relative overflow-hidden group animate-float">
+				<div className="bg-gradient-to-r from-blue-600 to-grey-700 text-white rounded-lg p-8 text-center relative overflow-hidden group animate-float">
 					<div className="absolute inset-0 bg-[url('/circuit-board.svg')] opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
 					<div className="relative z-10">
 						<h2 className="text-3xl font-bold mb-4">
@@ -193,7 +194,7 @@ export default function About() {
 							asChild
 							variant="secondary"
 							size="lg"
-							className="rounded-full bg-white text-purple-600 hover:bg-slate-100 shadow-lg hover:shadow-xl transition-all duration-300"
+							className="rounded-full bg-white text-blue-600 hover:bg-grey-100 shadow-lg hover:shadow-xl transition-all duration-300"
 						>
 							<Link href="/contact">Get Started Today</Link>
 						</Button>

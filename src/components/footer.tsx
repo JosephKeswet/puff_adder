@@ -2,20 +2,24 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<footer className="bg-muted text-muted-foreground">
+		<footer className="bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800">
 			<div className="container mx-auto px-4 py-8">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Puff-Adder Limited</h3>
+						<h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+							Puff-Adder Limited
+						</h3>
 						<p>Empowering businesses with innovative IT solutions.</p>
 					</div>
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+						<h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+							Quick Links
+						</h3>
 						<ul className="space-y-2">
 							<li>
 								<Link
 									href="/"
-									className="hover:underline"
+									className="hover:text-blue-600 dark:hover:text-white"
 								>
 									Home
 								</Link>
@@ -23,7 +27,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href="/services"
-									className="hover:underline"
+									className="hover:text-blue-600 dark:hover:text-white"
 								>
 									Services
 								</Link>
@@ -31,7 +35,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href="/about"
-									className="hover:underline"
+									className="hover:text-blue-600 dark:hover:text-white"
 								>
 									About
 								</Link>
@@ -39,7 +43,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href="/contact"
-									className="hover:underline"
+									className="hover:text-blue-600 dark:hover:text-white"
 								>
 									Contact
 								</Link>
@@ -47,7 +51,9 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+						<h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+							Contact Us
+						</h3>
 						<p>Email: info@puff-adder.com</p>
 						<p>Phone: +1 (123) 456-7890</p>
 					</div>

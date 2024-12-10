@@ -13,13 +13,13 @@ import { Mail, Phone, MapPin } from "lucide-react";
 export default function Contact() {
 	return (
 		<div className="container mx-auto px-4 py-12">
-			<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-slate-700 dark:from-purple-400 dark:to-slate-300 animate-fade-in-up">
+			<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-grey-700 dark:from-blue-400 dark:to-grey-300 animate-fade-in-up">
 				Contact Us
 			</h1>
 			<div className="max-w-4xl mx-auto">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<Card className="overflow-hidden group hover:shadow-lg transition-all duration-300 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm animate-fade-in-up">
-						<div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-slate-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<Card className="overflow-hidden group hover:shadow-lg transition-all duration-300 bg-white/80 dark:bg-grey-800/80 backdrop-blur-sm animate-fade-in-up">
+						<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-grey-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<CardHeader className="relative z-10">
 							<CardTitle>Get in Touch</CardTitle>
 							<CardDescription>
@@ -73,15 +73,15 @@ export default function Contact() {
 								</div>
 								<Button
 									type="submit"
-									className="w-full bg-gradient-to-r from-purple-600 to-slate-700 hover:from-purple-700 hover:to-slate-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+									className="w-full bg-gradient-to-r from-blue-600 to-grey-700 hover:from-blue-700 hover:to-grey-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
 								>
 									Send Message
 								</Button>
 							</form>
 						</CardContent>
 					</Card>
-					<Card className="overflow-hidden group hover:shadow-lg transition-all duration-300 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm animate-fade-in-up animation-delay-200">
-						<div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-slate-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<Card className="overflow-hidden group hover:shadow-lg transition-all duration-300 bg-white/80 dark:bg-grey-800/80 backdrop-blur-sm animate-fade-in-up animation-delay-200">
+						<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-grey-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 						<CardHeader className="relative z-10">
 							<CardTitle>Contact Information</CardTitle>
 							<CardDescription>
@@ -90,19 +90,19 @@ export default function Contact() {
 						</CardHeader>
 						<CardContent className="space-y-4 relative z-10">
 							<div className="flex items-center group">
-								<Mail className="h-5 w-5 text-purple-500 dark:text-purple-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
+								<Mail className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
 								<span className="text-slate-700 dark:text-slate-300">
 									info@puff-adder.com
 								</span>
 							</div>
 							<div className="flex items-center group">
-								<Phone className="h-5 w-5 text-purple-500 dark:text-purple-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
+								<Phone className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
 								<span className="text-slate-700 dark:text-slate-300">
 									+1 (123) 456-7890
 								</span>
 							</div>
 							<div className="flex items-center group">
-								<MapPin className="h-5 w-5 text-purple-500 dark:text-purple-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
+								<MapPin className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
 								<span className="text-slate-700 dark:text-slate-300">
 									123 Tech Street, IT City, 12345
 								</span>

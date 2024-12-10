@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 const config = {
 	darkMode: ["class"],
 	content: [
@@ -8,7 +10,6 @@ const config = {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 	],
-	prefix: "",
 	theme: {
 		container: {
 			center: true,
@@ -52,11 +53,45 @@ const config = {
 					DEFAULT: "hsl(var(--card))",
 					foreground: "hsl(var(--card-foreground))",
 				},
+				blue: {
+					50: "#e6f1ff",
+					100: "#cce3ff",
+					200: "#99c7ff",
+					300: "#66aaff",
+					400: "#338eff",
+					500: "#0072ff",
+					600: "#005bcc",
+					700: "#004499",
+					800: "#002e66",
+					900: "#001733",
+				},
+				grey: {
+					50: "#f8fafc",
+					100: "#f1f5f9",
+					200: "#e2e8f0",
+					300: "#cbd5e1",
+					400: "#94a3b8",
+					500: "#64748b",
+					600: "#475569",
+					700: "#334155",
+					800: "#1e293b",
+					900: "#0f172a",
+				},
+				vercel: {
+					pink: "#FF0080",
+					blue: "#0070F3",
+					cyan: "#50E3C2",
+					orange: "#F5A623",
+					violet: "#7928CA",
+				},
 			},
 			borderRadius: {
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
+				lg: `var(--radius)`,
+				md: `calc(var(--radius) - 2px)`,
 				sm: "calc(var(--radius) - 4px)",
+			},
+			fontFamily: {
+				sans: ["var(--font-sans)", ...fontFamily.sans],
 			},
 			keyframes: {
 				"accordion-down": {

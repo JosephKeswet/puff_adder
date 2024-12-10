@@ -22,8 +22,8 @@ export default function RootLayout({
 			className="scroll-smooth"
 		>
 			<body className={`${inter.className} antialiased`}>
-				<div className="flex flex-col min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-slate-100 dark:from-slate-900 dark:via-purple-900 dark:to-slate-800">
-					<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+				<div className="flex flex-col min-h-screen bg-white dark:bg-black">
+					<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] dark:opacity-20"></div>
 					<Header />
 					<main className="flex-grow relative z-10">{children}</main>
 					<Footer />

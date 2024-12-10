@@ -145,7 +145,7 @@ export default function Services() {
 	return (
 		<div className="container mx-auto px-4 py-12">
 			<ScrollAnimation variants={pageLoadVariants}>
-				<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-slate-700 dark:from-purple-400 dark:to-slate-300 animate-gradient text-glow">
+				<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-grey-700 dark:from-blue-400 dark:to-grey-300 animate-fade-in-up">
 					Our Core Services
 				</h1>
 			</ScrollAnimation>
@@ -163,21 +163,25 @@ export default function Services() {
 						variants={cardVariants}
 					>
 						<MotionCard
-							className="overflow-hidden group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm card-hover-effect glassmorphism"
+							className="overflow-hidden group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-grey-200 dark:border-grey-700 bg-white/80 dark:bg-grey-800/80 backdrop-blur-sm card-hover-effect glassmorphism"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: index * 0.1 }}
 							whileHover={{ scale: 1.03 }}
 						>
-							<div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-slate-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+							<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-grey-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 							<CardHeader className="relative z-10">
 								<motion.div
-									className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mb-4"
-									variants={iconVariants}
+									className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mb-4"
+									whileHover={{ scale: 1.1, rotate: 360 }}
+									transition={{ type: "spring", stiffness: 260, damping: 20 }}
 								>
-									<service.icon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+									<service.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
 								</motion.div>
-								<CardTitle className="text-2xl text-slate-800 dark:text-slate-200">
+								<CardTitle className="text-2xl text-grey-800 dark:text-grey-200">
 									{service.title}
 								</CardTitle>
-								<CardDescription className="text-slate-600 dark:text-slate-400">
+								<CardDescription className="text-grey-600 dark:text-grey-400">
 									{service.description}
 								</CardDescription>
 							</CardHeader>
@@ -187,11 +191,12 @@ export default function Services() {
 										<motion.li
 											key={feature}
 											className="flex items-center"
-											variants={featureVariants}
-											custom={featureIndex}
+											initial={{ opacity: 0, x: -20 }}
+											animate={{ opacity: 1, x: 0 }}
+											transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
 										>
-											<CheckCircle className="text-purple-500 dark:text-purple-400 mr-2 h-5 w-5 flex-shrink-0" />
-											<span className="text-slate-700 dark:text-slate-300">
+											<CheckCircle className="text-blue-500 dark:text-blue-400 mr-2 h-5 w-5 flex-shrink-0" />
+											<span className="text-grey-700 dark:text-grey-300">
 												{feature}
 											</span>
 										</motion.li>

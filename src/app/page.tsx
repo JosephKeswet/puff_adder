@@ -59,6 +59,7 @@ export default function Home() {
 					].map((service, index) => (
 						<div
 							key={service.name}
+							onClick={() => {}}
 							className="bg-white/80 dark:bg-grey-800/80  p-6 rounded-[8px] shadow-sm hover:shadow-sm transition-all duration-300 transform hover:-translate-y-1 border border-grey-100 dark:border-grey-700 overflow-hidden group animate-fade-in-up"
 							style={{ animationDelay: `${index * 100}ms` }}
 						>

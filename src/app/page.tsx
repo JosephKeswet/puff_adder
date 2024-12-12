@@ -14,8 +14,8 @@ import {
 
 export default function Home() {
 	return (
-		<div className="container mx-auto px-4 py-12 space-y-[150px]">
-			<section className="text-center mb-16 px-0 lg:px-[150px]">
+		<div className=" mx-auto  py-12 space-y-[150px]">
+			<section className="text-center mb-16 px-0 lg:px-[170px] py-[50px]">
 				<h1 className="h-auto pb-4  text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-slate-700 dark:from-blue-400 dark:to-grey-300 animate-fade-in-up">
 					Empower Your Business with Cutting-Edge IT
 				</h1>
@@ -45,11 +45,11 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="mb-16">
-				<h2 className="text-3xl font-bold mb-8 text-center text-slate-800 dark:text-slate-200 animate-fade-in-up">
+			<section className="mb-16 border py-[50px] ">
+				<h2 className=" text-3xl font-bold mb-8 text-center text-slate-800 dark:text-slate-200 animate-fade-in-up">
 					Our Services
 				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{[
 						{ name: "Networking", icon: Network },
 						{ name: "Software Development", icon: Code },
@@ -89,7 +89,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="text-center mb-16">
+			<section className="text-center mb-16 ">
 				<h2 className="text-3xl font-bold mb-8 text-slate-800 dark:text-slate-200 animate-fade-in-up">
 					Why Choose Puff-Adder?
 				</h2>
@@ -120,15 +120,15 @@ export default function Home() {
 				</Button>
 			</section>
 
-			<section className="bg-gradient-to-r from-blue-600 to-grey-700 text-white rounded-lg p-8 text-center relative overflow-hidden group animate-fade-in-up">
+			<section className="container bg-gradient-to-r from-blue-600 to-grey-700 text-white rounded-lg p-8 text-center relative overflow-hidden group animate-fade-in-up">
 				<div className="absolute inset-0 bg-[url('/circuit-board.svg')] opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
 				<div className="relative z-10">
 					<h2 className="text-3xl font-bold mb-4">
 						Ready to Transform Your IT Infrastructure?
 					</h2>
 					<p className="mb-8 max-w-2xl mx-auto">
-						Let's work together to create a tailored IT solution that drives
-						your business forward.
+						Let&apos;s work together to create a tailored IT solution that
+						drives your business forward.
 					</p>
 					<Button
 						asChild

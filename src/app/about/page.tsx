@@ -188,7 +188,7 @@ export default function About() {
 							Choose Puff-Adder Limited as your IT partner, and experience the
 							difference that comes with working with a company that truly cares
 							about your success. Let us help you navigate the complex world of
-							technology and unlock your business's full potential.
+							technology and unlock your business&apos;s full potential.
 						</p>
 						<Button
 							asChild

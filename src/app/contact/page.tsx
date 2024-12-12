@@ -23,7 +23,8 @@ export default function Contact() {
 						<CardHeader className="relative z-10">
 							<CardTitle>Get in Touch</CardTitle>
 							<CardDescription>
-								Fill out the form and we'll get back to you as soon as possible.
+								Fill out the form and we&apos;ll get back to you as soon as
+								possible.
 							</CardDescription>
 						</CardHeader>
 						<CardContent className="relative z-10">

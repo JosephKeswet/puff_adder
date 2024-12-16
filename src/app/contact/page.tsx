@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,8 +10,37 @@ import {
 	CardContent,
 } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
+
+	const handleInputChange = (e: any) => {
+		const { id, value } = e.target;
+		setFormData((prev) => ({
+			...prev,
+			[id]: value,
+		}));
+	};
+
+	const handleSubmit = (e: any) => {
+		e.preventDefault();
+
+		const { name, email, message } = formData;
+
+		// Use `mailto` to open the user's email client
+		const mailtoLink = `mailto:info@puff-adder.ng?subject=Message from ${encodeURIComponent(
+			name
+		)}&body=${encodeURIComponent(
+			`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+		)}`;
+		window.location.href = mailtoLink;
+	};
+
 	return (
 		<div className="container mx-auto px-4 py-12">
 			<h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-grey-700 dark:from-blue-400 dark:to-grey-300 animate-fade-in-up">
@@ -28,7 +58,10 @@ export default function Contact() {
 							</CardDescription>
 						</CardHeader>
 						<CardContent className="relative z-10">
-							<form className="space-y-6">
+							<form
+								className="space-y-6"
+								onSubmit={handleSubmit}
+							>
 								<div>
 									<label
 										htmlFor="name"
@@ -41,6 +74,8 @@ export default function Contact() {
 										placeholder="Your name"
 										required
 										className="bg-white/50 dark:bg-slate-800/50"
+										value={formData.name}
+										onChange={handleInputChange}
 									/>
 								</div>
 								<div>
@@ -56,6 +91,8 @@ export default function Contact() {
 										placeholder="Your email"
 										required
 										className="bg-white/50 dark:bg-slate-800/50"
+										value={formData.email}
+										onChange={handleInputChange}
 									/>
 								</div>
 								<div>
@@ -70,6 +107,8 @@ export default function Contact() {
 										placeholder="Your message"
 										required
 										className="bg-white/50 dark:bg-slate-800/50"
+										value={formData.message}
+										onChange={handleInputChange}
 									/>
 								</div>
 								<Button
@@ -93,21 +132,21 @@ export default function Contact() {
 							<div className="flex items-center group">
 								<Mail className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
 								<span className="text-slate-700 dark:text-slate-300">
-									info@puff-adder.com
+									info@puff-adder.ng
 								</span>
 							</div>
 							<div className="flex items-center group">
 								<Phone className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
 								<span className="text-slate-700 dark:text-slate-300">
-									+1 (123) 456-7890
+									+2348037008529
 								</span>
 							</div>
-							<div className="flex items-center group">
+							{/* <div className="flex items-center group">
 								<MapPin className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
 								<span className="text-slate-700 dark:text-slate-300">
 									123 Tech Street, IT City, 12345
 								</span>
-							</div>
+							</div> */}
 						</CardContent>
 					</Card>
 				</div>

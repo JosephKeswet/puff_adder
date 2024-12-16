@@ -54,8 +54,8 @@ export default function Footer() {
 						<h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
 							Contact Us
 						</h3>
-						<p>Email: info@puff-adder.com</p>
-						<p>Phone: +1 (123) 456-7890</p>
+						<p>Email: info@puff-adder.ng</p>
+						<p>Phone:+2348037008529</p>
 					</div>
 				</div>
 				<div className="mt-8 text-center">

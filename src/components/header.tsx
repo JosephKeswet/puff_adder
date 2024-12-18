@@ -30,7 +30,7 @@ export default function Header() {
 	];
 
 	return (
-		<header className="bg-gray-100 dark:bg-black  backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
+		<header className="bg-gray-100 dark:dark:bg-[#1A202C] backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
 					<div className="flex justify-start lg:w-0 lg:flex-1">
@@ -82,7 +82,7 @@ export default function Header() {
 						))}
 					</nav>
 					<div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-						{/* <Button
+						<Button
 							variant="ghost"
 							size="icon"
 							onClick={toggleDarkMode}
@@ -93,7 +93,7 @@ export default function Header() {
 							) : (
 								<Moon className="h-5 w-5" />
 							)}
-						</Button> */}
+						</Button>
 						<Button
 							asChild
 							className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-white dark:text-black dark:hover:bg-gray-200"
@@ -147,7 +147,7 @@ export default function Header() {
 							</div>
 						</div>
 						<div className="py-6 px-5 space-y-6">
-							{/* <Button
+							<Button
 								variant="ghost"
 								size="icon"
 								onClick={toggleDarkMode}
@@ -158,7 +158,7 @@ export default function Header() {
 								) : (
 									<Moon className="h-5 w-5" />
 								)}
-							</Button> */}
+							</Button>
 							<Button
 								asChild
 								className="w-full bg-blue-600 text-white hover:bg-blue-700 dark:bg-white dark:text-black dark:hover:bg-gray-200"
